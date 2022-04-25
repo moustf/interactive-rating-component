@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body data-light="on">
+    <div class="theme-changer">
+      <input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox" class="checkbox-label">
+        <i class="ri-moon-fill moon"></i>
+        <i class="ri-sun-fill sun"></i>
+        <div class="ball"></div>
+      </label>
+    </div>
+    <div class="container">
+      <!-- ? Rating state start -->
+      <section class="rating-state-section">
+        <figure class="star-img">
+          <img src="images/icon-star.svg" alt="star-icon" class="star-icon" />
+        </figure>
+        <h1 class="main-heading">How did we do?</h1>
+        <p class="main-paragraph">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <main class="rating">
+          <ul class="numbers">
+            <li class="num">1</li>
+            <li class="num">2</li>
+            <li class="num">3</li>
+            <li class="num">4</li>
+            <li class="num">5</li>
+          </ul>
+          <button type="submit" id="submit">Submit</button>
+        </main>
+      </section>
+      <!-- ? Rating state end -->
+
+      <!-- ? Thank you state start -->
+      <section class="thank-you-section">
+        <img
+          src="images/illustration-thank-you.svg"
+          alt="thank you image"
+          class="thank-you-image"
+        />
+        <!-- ? Add rating here -->
+        <p class="selected">
+          You selected <span class="rate-var"></span> out of 5
+        </p>
+        <p class="thank-you-para">Thank you!</p>
+        <p class="rating-last-para">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </section>
+      <!-- ? Thank you state end -->
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

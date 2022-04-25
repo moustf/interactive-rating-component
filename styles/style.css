@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --body-background-color: hsl(216, 12%, 8%);
+  --cont-background-color: hsl(213, 19%, 18%);
+  --primary-color: hsl(25, 97%, 53%);
+  --paras-color: hsl(216, 12%, 54%);
+  --numbers-color: hsl(217, 12%, 63%);
+  --heading-color: hsl(0, 0%, 100%);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--body-background-color);
+  font-family: "Overpass", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.light {
+  --body-background-color: hsl(215, 93%, 88%);
+  --cont-background-color: hsl(213, 96%, 82%);
+  --primary-color: hsl(50, 97%, 53%);
+  --paras-color: hsl(216, 11%, 28%);
+  --numbers-color: hsl(218, 8%, 20%);
+  --heading-color: hsl(0, 0%, 0%);
+}
+
+p {
+  font-size: 15px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.theme-changer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  /* transform: translate(20rem, -20rem); */
+  right: 1rem;
+  top: 1rem;
+}
+
+.theme-changer #checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.theme-changer .checkbox-label {
+  width: 3.5rem;
+  height: 2rem;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+  border-radius: 50px;
+}
+
+.theme-changer .checkbox-label .moon {
+  color: #f1c40fc6;
+  font-size: larger;
+}
+
+.theme-changer .checkbox-label .sun {
+  color: #f39c12;
+  font-size: larger;
+}
+
+.theme-changer .checkbox-label .ball {
+  width: 28px;
+  height: 28px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.theme-changer #checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+.container {
+  width: 90%;
+  height: 45%;
+  background-color: var(--cont-background-color);
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.container .rating-state-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.container .rating-state-section .star-img {
+  width: 12%;
+  border-radius: 50%;
+  display: flex;
+  place-content: center;
+  background-color: var(--body-background-color);
+}
+
+.container .rating-state-section .star-icon {
+  margin-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.container .rating-state-section .main-heading {
+  color: var(--heading-color);
+}
+
+.container .rating-state-section .main-paragraph {
+  color: var(--paras-color);
+}
+
+.container .rating-state-section .rating {
+  height: 7rem;
+}
+
+.container .rating-state-section .rating .numbers {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.container .rating-state-section .rating .numbers .num {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--body-background-color);
+  color: var(--numbers-color);
+  text-align: center;
+  line-height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.container .rating-state-section .rating .numbers .num:hover {
+  background-color: var(--primary-color);
+  color: var(--heading-color);
+}
+
+.container .rating-state-section #submit {
+  border: none;
+  width: 100%;
+  height: 30%;
+  background-color: var(--primary-color);
+  border-radius: 2rem;
+  color: var(--heading-color);
+  text-transform: uppercase;
+  font-size: large;
+  cursor: pointer;
+}
+
+.container .rating-state-section #submit:hover {
+  background-color: var(--heading-color);
+  color: var(--primary-color);
+}
+
+.container .thank-you-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  display: none;
+}
+
+.container .thank-you-section .selected {
+  width: 70%;
+  height: 2rem;
+  background-color: var(--body-background-color);
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 2rem;
+  border-radius: 3rem;
+}
+
+.container .thank-you-section .thank-you-para {
+  color: var(--heading-color);
+  font-size: xx-large;
+}
+
+.container .thank-you-section .rating-last-para {
+  color: var(--paras-color);
+  text-align: center;
+}
+
+/* ! Starting media query for the desktop */
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 25%;
+    height: 45%;
+  }
+  .container .rating-state-section {
+    gap: 3rem;
+  }
+  .container .rating-state-section .rating .numbers {
+    margin-bottom: 2rem;
+  }
+}

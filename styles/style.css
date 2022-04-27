@@ -58,6 +58,10 @@ ul li {
   top: 1rem;
 }
 
+label {
+  display: none;
+}
+
 .theme-changer #checkbox {
   opacity: 0;
   position: absolute;

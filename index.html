@@ -18,15 +18,16 @@
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body data-light="on">
-    <div class="theme-changer">
-      <input type="checkbox" name="checkbox" id="checkbox">
+    <section class="theme-changer">
+      <label for="checkbox"></label>
+      <input type="checkbox" name="checkbox" id="checkbox" />
       <label for="checkbox" class="checkbox-label">
         <i class="ri-moon-fill moon"></i>
         <i class="ri-sun-fill sun"></i>
         <div class="ball"></div>
       </label>
-    </div>
-    <div class="container">
+    </section>
+    <main class="container">
       <!-- ? Rating state start -->
       <section class="rating-state-section">
         <figure class="star-img">
@@ -37,7 +38,7 @@
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <main class="rating">
+        <div class="rating">
           <ul class="numbers">
             <li class="num">1</li>
             <li class="num">2</li>
@@ -46,7 +47,7 @@
             <li class="num">5</li>
           </ul>
           <button type="submit" id="submit">Submit</button>
-        </main>
+        </div>
       </section>
       <!-- ? Rating state end -->
 
@@ -68,7 +69,7 @@
         </p>
       </section>
       <!-- ? Thank you state end -->
-    </div>
+    </main>
     <script src="js/index.js"></script>
   </body>
 </html>

@@ -5,6 +5,7 @@
   --cont-background-color: hsl(213, 19%, 18%);
   --primary-color: hsl(25, 97%, 53%);
   --paras-color: hsl(216, 12%, 54%);
+  --nums-background-color: hsl(206, 24%, 13%);
   --numbers-color: hsl(217, 12%, 63%);
   --heading-color: hsl(0, 0%, 100%);
 }
@@ -37,6 +38,7 @@ body {
   --cont-background-color: hsl(213, 96%, 82%);
   --primary-color: hsl(50, 97%, 53%);
   --paras-color: hsl(216, 11%, 28%);
+  --nums-background-color: hsl(206, 39%, 62%);
   --numbers-color: hsl(218, 8%, 20%);
   --heading-color: hsl(0, 0%, 0%);
 }
@@ -123,7 +125,7 @@ label {
   border-radius: 50%;
   display: flex;
   place-content: center;
-  background-color: var(--body-background-color);
+  background-color: var(--nums-background-color);
 }
 
 .container .rating-state-section .star-icon {
@@ -154,7 +156,7 @@ label {
 .container .rating-state-section .rating .numbers .num {
   width: 3rem;
   height: 3rem;
-  background-color: var(--body-background-color);
+  background-color: var(--nums-background-color);
   color: var(--numbers-color);
   text-align: center;
   line-height: 3rem;
@@ -218,12 +220,20 @@ label {
 @media only screen and (min-width: 1024px) {
   .container {
     width: 25%;
-    height: 60%;
+    height: 50%;
   }
   .container .rating-state-section {
-    gap: 3rem;
+    gap: 1.5rem;
   }
   .container .rating-state-section .rating .numbers {
     margin-bottom: 2rem;
+  }
+  .container .rating-state-section .star-img {
+    width: 12%;
+    border-radius: 50%;
+  }
+  .container .rating-state-section .star-icon {
+    margin-bottom: 0.7rem;
+    padding-top: 0.7rem;
   }
 }
